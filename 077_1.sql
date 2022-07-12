@@ -1,0 +1,18 @@
+create database insurance001;
+use insurance001;
+show tables;
+create table person(driver_id int primary key,driver_name varchar(50) not null,Mobile int(11) not null,address varchar(50) not null);
+create table car(reg_no varchar(50) primary key,model varchar(50) not null,manufactured_year int(10) not null);
+create table accident(report_num int primary key,accident_date int(10) not null,location varchar(50) not null);
+create table owns(driver_id int primary key,reg_num varchar(50) not null);
+create table participated(foreign key(driver_id int primary key,reg_num int(10) not null,report_num int(10) not null,damage_amt int(10) not null);
+insert into person(driver_id,driver_name,Mobile,address)values(01,'mehul',989898889,'poppy land');
+select * from person;
+insert into car(reg_no,model,manufactured_year)values('KA6789','tata',2002);
+select * from car;
+insert into accident(report_num,accident_date,location)values(013,13062006,'thilaknagar');
+select * from accident;
+insert into owns(driver_id,reg_num)values(01,'KA-6789');
+select * from owns;
+insert into participated(driver_id,reg_num,report_num,damage_amt)values(01,'KA-6789',100,5000);
+select * from participated;
